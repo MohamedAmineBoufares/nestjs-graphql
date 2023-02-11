@@ -2,16 +2,12 @@ import { IsNotEmpty } from 'class-validator';
 import { ArgsType, Field } from '@nestjs/graphql';
 
 @ArgsType()
-export class CreateLessonArgs {
+export class CreateStudentDto {
   @Field()
   @IsNotEmpty()
-  name: string;
+  firstName: string;
 
   @Field()
   @IsNotEmpty()
-  startDate: string;
-
-  @Field()
-  @IsNotEmpty()
-  endDate: string;
+  lastName: string;
 }

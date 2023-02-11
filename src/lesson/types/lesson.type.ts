@@ -1,10 +1,11 @@
-import { Field, ObjectType } from '@nestjs/graphql';
+import { Field, ID, ObjectType } from '@nestjs/graphql';
 
 import { Schema } from 'mongoose';
+import { StudentType } from 'src/students/types/student.type';
 
 @ObjectType('LessonType')
 export class LessonType {
-  @Field(() => String)
+  @Field(() => ID)
   _id: Schema.Types.ObjectId;
 
   @Field()
@@ -15,4 +16,7 @@ export class LessonType {
 
   @Field()
   endDate: string;
+
+  @Field(() => [StudentType])
+  students: string[];
 }
