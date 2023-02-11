@@ -57,4 +57,4 @@ This project is finished.
 
 ## Licence
 
-[MIT licensed](LICENSE).
+[MIT licensed](./LICENCE).
